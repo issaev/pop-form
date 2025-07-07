@@ -19,7 +19,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label class="block text-sm font-medium text-gray-700" for="missionId">Номер / име на мисия <span class="text-red-500">*</span></label>
-            <input type="text" id="missionId" name="missionId" required class="mt-1 w-full rounded-md border-gray-300" placeholder="01/10.07.25 пожар Долно Уйно"/>
+            <input type="text" id="missionId" name="missionId" class="mt-1 w-full rounded-md border-gray-300" placeholder="01/10.07.25 пожар Долно Уйно"/>
           </div>
         <div>
             <label class="block text-sm font-medium text-gray-700" for="mapLink">Линк към споделена CalTopo карта</label>
@@ -27,11 +27,11 @@
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700" for="leadName">Име на ръководител на терен <span class="text-red-500">*</span></label>
-            <input type="text" id="leadName" name="leadName" required class="mt-1 w-full rounded-md border-gray-300" />
+            <input type="text" id="leadName" name="leadName" class="mt-1 w-full rounded-md border-gray-300" />
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700" for="leadPhone">Телефон на ръководителя <span class="text-red-500">*</span></label>
-            <input type="tel" id="leadPhone" name="leadPhone" required class="mt-1 w-full rounded-md border-gray-300" />
+            <input type="tel" id="leadPhone" name="leadPhone" class="mt-1 w-full rounded-md border-gray-300" />
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700" for="lead2">Име на втори ръководител</label>
@@ -47,7 +47,7 @@
         <fieldset>
           <legend class="text-sm font-medium text-gray-700">Тип мисия <span class="text-red-500">*</span></legend>
           <div class="mt-2 grid grid-cols-2 md:grid-cols-4 gap-2">
-            <label class="inline-flex items-center"><input type="radio" name="missionType" value="Издирване / SAR" required class="h-4 w-4 text-indigo-600"><span class="ml-2">Издирване / SAR</span></label>
+            <label class="inline-flex items-center"><input type="radio" name="missionType" value="Издирване / SAR" class="h-4 w-4 text-indigo-600"><span class="ml-2">Издирване / SAR</span></label>
             <label class="inline-flex items-center"><input type="radio" name="missionType" value="Пожар" class="h-4 w-4 text-indigo-600"><span class="ml-2">Пожар</span></label>
             <label class="inline-flex items-center"><input type="radio" name="missionType" value="Наводнение" class="h-4 w-4 text-indigo-600"><span class="ml-2">Наводнение</span></label>
             <label class="inline-flex items-center"><input type="radio" name="missionType" value="Друго" class="h-4 w-4 text-indigo-600"><span class="ml-2">Друго</span></label>
@@ -58,7 +58,7 @@
         <fieldset>
           <legend class="text-sm font-medium text-gray-700">Оценка на риска <span class="text-red-500">*</span></legend>
           <div class="mt-2 grid grid-cols-2 md:grid-cols-3 gap-2">
-            <label class="inline-flex items-center"><input type="checkbox" name="risk" value="Труден терен" required class="h-4 w-4 text-indigo-600"><span class="ml-2">Труден терен</span></label>
+            <label class="inline-flex items-center"><input type="checkbox" name="risk" value="Труден терен" class="h-4 w-4 text-indigo-600"><span class="ml-2">Труден терен</span></label>
             <label class="inline-flex items-center"><input type="checkbox" name="risk" value="Висока температура" class="h-4 w-4 text-indigo-600"><span class="ml-2">Висока температура</span></label>
             <label class="inline-flex items-center"><input type="checkbox" name="risk" value="Нощни действия" class="h-4 w-4 text-indigo-600"><span class="ml-2">Нощни действия</span></label>
             <label class="inline-flex items-center"><input type="checkbox" name="risk" value="Лоша видимост" class="h-4 w-4 text-indigo-600"><span class="ml-2">Лоша видимост</span></label>
@@ -77,11 +77,11 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <label class="block text-sm font-medium text-gray-700" for="rallyLocation">Локация на сборен пункт <span class="text-red-500">*</span></label>
-              <input type="text" id="rallyLocation" name="rallyLocation" required class="mt-1 w-full rounded-md border-gray-300" placeholder="координати, линк или описание" />
+              <input type="text" id="rallyLocation" name="rallyLocation" class="mt-1 w-full rounded-md border-gray-300" placeholder="координати, линк или описание" />
             </div>
                       <div>
               <label class="block text-sm font-medium text-gray-700" for="rallyDateTime">Час и дата на сборен пункт <span class="text-red-500">*</span></label>
-              <input type="datetime-local" id="rallyDateTime" name="rallyDateTime" required class="mt-1 w-full rounded-md border-gray-300" />
+              <input type="datetime-local" id="rallyDateTime" name="rallyDateTime" class="mt-1 w-full rounded-md border-gray-300" />
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -116,7 +116,7 @@
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700" for="equipment">Реквизиция на клубна екипировка <span class="text-red-500">*</span></label>
-            <textarea id="equipment" name="equipment" rows="3" required class="mt-1 w-full rounded-md border-gray-300" placeholder="Превозни средства, мото-помпи, резачки…"></textarea>
+            <textarea id="equipment" name="equipment" rows="3" class="mt-1 w-full rounded-md border-gray-300" placeholder="Превозни средства, мото-помпи, резачки…"></textarea>
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700" for="attachment">Приложение – списък с участници и подписи за инструктаж (отделен лист)</label>

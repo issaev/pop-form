@@ -130,16 +130,31 @@
         </div>
       </form>
 
-      <!-- Optional JS to preview data locally -->
+      <!-- Script to send form data to Google Sheets -->
       <script>
-        document.getElementById('popForm').addEventListener('submit', function (e) {
-          e.preventDefault();
-          const formData = new FormData(this);
-          const entries = Object.fromEntries(formData.entries());
-          entries.risk = formData.getAll('risk');
-          console.log('Форма данни:', entries);
-          alert('Формулярът е попълнен успешно! (данните са в console.log)');
-        });
+        const scriptUrl =
+          'https://script.google.com/macros/s/AKfycbzCjxRSirAE9Lzgx_YfEzKe09QuHEmeFu05b1ZR4HfF/dev';
+
+        document
+          .getElementById('popForm')
+          .addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            const entries = Object.fromEntries(formData.entries());
+            entries.risk = formData.getAll('risk');
+
+            fetch(scriptUrl, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(entries),
+            })
+              .then(() =>
+                alert('Формулярът е изпратен успешно!')
+              )
+              .catch((err) =>
+                alert('Грешка при изпращане: ' + err.message)
+              );
+          });
 
         // Toggle other risk input visibility
         const riskOtherCheckbox = document.getElementById('riskOther');

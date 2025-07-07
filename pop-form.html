@@ -21,9 +21,9 @@
             <label class="block text-sm font-medium text-gray-700" for="missionId">Номер / име на мисия <span class="text-red-500">*</span></label>
             <input type="text" id="missionId" name="missionId" required class="mt-1 w-full rounded-md border-gray-300" placeholder="01/10.07.25 пожар Долно Уйно"/>
           </div>
-         <div>
+        <div>
             <label class="block text-sm font-medium text-gray-700" for="mapLink">Линк към споделена CalTopo карта</label>
-            <input type="text" id="missionId" name="missionId" placeholder="карта с update права" class="mt-1 w-full rounded-md border-gray-300" />
+            <input type="text" id="mapLink" name="mapLink" placeholder="карта с update права" class="mt-1 w-full rounded-md border-gray-300" />
           </div>
           <div>
             <label class="block text-sm font-medium text-gray-700" for="leadName">Име на ръководител на терен <span class="text-red-500">*</span></label>
@@ -136,6 +136,7 @@
           e.preventDefault();
           const formData = new FormData(this);
           const entries = Object.fromEntries(formData.entries());
+          entries.risk = formData.getAll('risk');
           console.log('Форма данни:', entries);
           alert('Формулярът е попълнен успешно! (данните са в console.log)');
         });

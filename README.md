@@ -12,7 +12,9 @@ The project contains a few simple files:
 | `README.md`     | Project documentation                                     |
 | `LICENSE`       | MIT license for the code                                   |
 
-Open `pop-form.html` directly in a browser to view and test the form. The form currently logs submitted values in the browser console.
+Open `pop-form.html` directly in a browser to view and test the form. The form
+sends submitted values to a Google Apps Script, which stores them in a Google
+Sheet.
 
 ## Contributing
 

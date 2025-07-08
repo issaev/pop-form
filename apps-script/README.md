@@ -8,7 +8,6 @@ This folder contains a minimal example of using **HtmlService.createTemplateFrom
 2. Select **Extensions → Apps Script** to open the script editor.
 3. Create two files in the Apps Script project:
    - **Code.gs** – server side logic (see `Code.gs` in this folder).
-   - **Form.html** – the HTML form template (see `Form.html`).
 4. Deploy the project as a **Web App** (Deploy → New deployment → Select "Web app").
    - Execute as: `Me`
    - Who has access: `Anyone`
